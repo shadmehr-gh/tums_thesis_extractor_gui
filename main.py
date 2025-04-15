@@ -26,7 +26,7 @@ def main():
     global gui_app
     gui_app = tkinter.Tk()
     gui_app.title("Thesis Extractor")
-    gui_app.geometry('385x305')
+    gui_app.geometry('385x335')
 
     global style_window
     style_window = Style(gui_app)
@@ -54,7 +54,7 @@ def main():
     #textbox_thesis_link.grid(row=1, column=0)
     textbox_thesis_link.insert(tkinter.END, "https://lib.tums.ac.ir/site/catalogue/fulltext/")
 
-    label_thesis_link_example = tkinter.Label(gui_app, text='Ex: https://lib.tums.ac.ir/site/catalogue/fulltext/229225/170040401', width=55, fg="blue", anchor='w')
+    label_thesis_link_example = tkinter.Label(gui_app, text='Ex: https://lib.tums.ac.ir/site/catalogue/fulltext/244952/182713964', width=55, fg="blue", anchor='w')
     label_thesis_link_example.place(x=10, y=50)
     #label_thesis_link_example.pack(side=tkinter.TOP, fill=tkinter.BOTH, padx=5, pady=5)
     #label_thesis_link_example.grid(row=0, column=0)
@@ -116,7 +116,7 @@ def main():
     #radiobutton_c.grid(row=5, column=2)
 
     button_start = tkinter.Button(gui_app, text='Start', width=20)
-    button_start.place(x=10, y=270)
+    button_start.place(x=115, y=270)
     #button_start.pack(side=tkinter.TOP, padx=5, pady=5)
     #button_start.grid(row=6, column=0)
     button_start.bind("<Enter>", on_hover)
@@ -130,7 +130,7 @@ def main():
 
     global progress_bar
     progress_bar = tkinter.ttk.Progressbar(gui_app, orient="horizontal", length=200, mode="indeterminate", maximum=100, value=0, style="LabeledProgressbar")
-    progress_bar.place(x=170, y=273)
+    progress_bar.place(x=95, y=303)
     #progress_bar.pack(side=tkinter.TOP, padx=5, pady=5)
     #progress_bar.grid(row=6, column=0)
 
@@ -142,7 +142,7 @@ def main():
 
 def on_click_label_thesis_link_example(event):
     textbox_thesis_link.delete('0', tkinter.END)
-    textbox_thesis_link.insert(tkinter.END, "https://lib.tums.ac.ir/site/catalogue/fulltext/229225/170040401")
+    textbox_thesis_link.insert(tkinter.END, "https://lib.tums.ac.ir/site/catalogue/fulltext/244952/182713964")
 
 
 def on_hover(event):
